@@ -87,6 +87,77 @@ scenes: {
 				fakeDepth: false,
 				bboxFromRenderer: true,
 				walkingSpeed: 1000
+			},
+			char2: {
+				class: "com.bladecoder.engine.model.CharacterActor",
+				id: "char2",
+				bbox: [ 0, 0, 0, 0, 0, 0, 0, 0 ],
+				pos: {
+					x: 1238.1943,
+					y: 452.67322
+				},
+				visible: true,
+				refPoint: {},
+				verbs: {
+					talkto: {
+						id: "talkto",
+						actions: [
+							{
+								class: "com.bladecoder.engine.actions.InkRunAction",
+								path: "Start",
+								wait: true
+							}
+						]
+					}
+				},
+				interaction: true,
+				zIndex: 0,
+				layer: "foreground",
+				renderer: {
+					class: "com.bladecoder.engine.model.AtlasRenderer",
+					fanims: {
+						talk: {
+							class: "com.bladecoder.engine.anim.AtlasAnimationDesc",
+							id: "talk",
+							source: "char",
+							duration: 1,
+							animationType: "NO_REPEAT",
+							count: -1,
+							preload: true
+						},
+						stand: {
+							class: "com.bladecoder.engine.anim.AtlasAnimationDesc",
+							id: "stand",
+							source: "char",
+							duration: 1,
+							animationType: "NO_REPEAT",
+							count: -1,
+							preload: true
+						},
+						walk: {
+							class: "com.bladecoder.engine.anim.AtlasAnimationDesc",
+							id: "walk",
+							source: "char",
+							duration: 1,
+							animationType: "NO_REPEAT",
+							count: -1,
+							preload: true
+						}
+					},
+					initAnimation: "stand",
+					orgAlign: 0
+				},
+				scaleX: 200,
+				scaleY: 200,
+				rot: 0,
+				tint: {
+					r: 1,
+					b: 0.5647059,
+					a: 1
+				},
+				fakeDepth: false,
+				bboxFromRenderer: true,
+				walkingSpeed: 1000
 			}
 		},
 		musicDesc: null,
@@ -95,5 +166,8 @@ scenes: {
 		walkZone: "walkzone"
 	}
 },
-initScene: "scene-1"
+initScene: "scene-1",
+inkManager: {
+	storyName: "ink"
+}
 }
