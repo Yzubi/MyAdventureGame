@@ -1,3 +1,3 @@
 git pull
-git push -u origin master
-git push -u origin stable
+git push origin master
+git push origin stable
