@@ -1,11 +1,11 @@
--> START
-=== START ===
+-> Start
+=== Start ===
 Do you want coffee?
 * Yes!
 * No!
 + Maybe...
 Think a little more!
--> START
+-> Start
 + Leave
 - (END)
 -> END
